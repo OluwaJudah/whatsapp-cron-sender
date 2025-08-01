@@ -14,7 +14,7 @@ const sendWhatsAppMessages = async () => {
 };
 
 // Schedule every Friday at 9:00 AM
-cron.schedule('0 12 * * 5', () => {
+cron.schedule('0 10 * * 5', () => {
   console.log("⏰ Running scheduled WhatsApp job at 9:00 AM Friday");
   sendWhatsAppMessages();
 });
