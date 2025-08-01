@@ -18,6 +18,7 @@ cron.schedule(
   "0 12 * * 5",
   () => {
     console.log("⏰ Running scheduled WhatsApp job at 12:00 PM Friday");
+    console.log("Service live", new Date().toISOString());
     sendWhatsAppMessages();
   },
   {
