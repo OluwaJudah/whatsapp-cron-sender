@@ -4,7 +4,7 @@ const axios = require("axios");
 
 const sendWhatsAppMessages = async () => {
   try {
-    const res = await axios.get(
+    const res = await axios.post(
       `${process.env.NEXT_PUBLIC_BASE_URL}/api/appointment-reminders`
     );
     console.log("Reminders sent:", res.data);
