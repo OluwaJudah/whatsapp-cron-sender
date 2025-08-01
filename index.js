@@ -17,11 +17,11 @@ const sendWhatsAppMessages = async () => {
 cron.schedule(
   "0 12 * * 5",
   () => {
-    console.log("⏰ Running scheduled WhatsApp job at 9:00 AM Friday");
+    console.log("⏰ Running scheduled WhatsApp job at 12:00 PM Friday");
     sendWhatsAppMessages();
   },
   {
-    timezone: "Europe/Amsterdam",
+    timezone: "Africa/Johannesburg", // ensures 12:00 SAST regardless of server default
   }
 );
 
