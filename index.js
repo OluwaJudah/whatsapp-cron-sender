@@ -15,7 +15,7 @@ const sendWhatsAppMessages = async () => {
 
 // Schedule every Friday at 9:00 AM
 cron.schedule(
-  "24 14 * * 5",
+  "30 14 * * 5",
   () => {
     console.log("Service live", new Date().toISOString());
     sendWhatsAppMessages();
