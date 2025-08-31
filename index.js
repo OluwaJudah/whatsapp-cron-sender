@@ -5,7 +5,7 @@ const axios = require("axios");
 const sendWhatsAppMessages = async () => {
   try {
     const res = await axios.post(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/appointment-reminders`
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/baby-scans-notifications`
     );
     console.log("Reminders sent:", res.data);
   } catch (err) {
@@ -15,7 +15,7 @@ const sendWhatsAppMessages = async () => {
 
 // Schedule every Friday at 9:00 AM
 cron.schedule(
-  "15 17 * * 5",
+  "22 08 * * *",
   () => {
     console.log("Service live", new Date().toISOString());
     sendWhatsAppMessages();
